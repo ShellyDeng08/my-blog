@@ -3,10 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
-keywords:
+title: Xuelian's Blog
+subtitle: Technology Blog //技术博客
+description: The technical blog homepage of a front-end engineer who has worked for 7 years records her learning experience in the front-end field.
+keywords: Frontend, JavaScript, React, Node.js, Algorithm, Data Structure
 author: Xuelian Deng
 language: en
 timezone: ''

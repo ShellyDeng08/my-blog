@@ -15,26 +15,29 @@ npm install -g hexo-cli
 Refer: https://hexo.io/zh-cn/docs/
 ## Initialize Project // 初始化
 1. Create an new folder at local: // 本地创建并初始化项目
+```
 hexo init [your_folder]
-2. Build static page // 构建静态文件
-hexo generate
-3. Run server // 本地启动
+```
+2. Run server // 本地启动
+```
 hexo server
-默认情况下，项目运行在http://localhost:4000/
+```
+默认情况下，项目运行在http://localhost:4000/，如果还有子目录，参见后面的url配置
+<img width="1440" alt="截屏2023-12-01 上午9 22 42" src="https://github.com/ShellyDeng08/my-blog/assets/149735476/25c01752-402a-419f-8862-b66051a8f3e7">
+
 ## Config // 配置
-### Github
+### Github Config
 1. 创建项目
 ![image](https://github.com/ShellyDeng08/my-blog/assets/149735476/a5dc9830-695c-4501-a23e-601707a77196)
 
 项目名称会是你的博客路由，最后默认的博客地址是${user_name}.github.io/{repo_name}
-2. 关联本地项目并推送到远程分支
-记住你的分支名称
+2. 关联本地项目并推送到远程分支，记住你的分支名称，后面配置的时候要用到，通常是`master`分支
 3. 打开项目Settings -> Pages -> Build and deployment, 将source改为Github Actions
 
 ![image](https://github.com/ShellyDeng08/my-blog/assets/149735476/1f517135-9fde-4d7f-a24a-e135cb147919)
 
-### Project
-项目根目录下创建.github/workflows/pages.yml
+### Project Config
+1. 项目根目录下创建`.github/workflows/pages.yml`
 ```
 name: Pages
 
@@ -85,20 +88,22 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v2
 ```
-注意修改：
-分支名称
+这个文件中你需要修改两个地方：
+1. 分支名称, 替换成你自己的分支
 ```
 branches:
       - master # default branch
-node版本：
+```
+2. node版本：可以使用`node -v`查看你当前版本号
+```
       - name: Use Node.js 18.12.1
         uses: actions/setup-node@v2
         with:
           node-version: '18'
 ```
-可以使用`node -v`查看你当前版本号
 
-修改_config.yml的url配置
+
+2. 修改_config.yml的url配置
 ```
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -110,33 +115,20 @@ pretty_urls:
   trailing_html: true # Set to false to remove trailing '.html' from permalinks
 ```
 把url改为 https://${user_name}.github.io/{repo_name}的格式
+
 提交更新到远程，它就会自动开始部署
-再回到项目Settings -> Pages，看到Your site is live at xxx，打开这个地址，就能看到你的博客啦
+
+再回到Github项目Settings -> Pages，看到Your site is live at xxx，打开这个地址，就能看到你的博客啦
 ![image](https://github.com/ShellyDeng08/my-blog/assets/149735476/d0058a69-c827-4afd-9480-b599534c2451)
 
 比如我的：https://shellydeng08.github.io/my-blog/
 
-## Hexo基本使用
-### 创建新文章
+## 本地运行
+创建新post:
+```
+hexo new "Article_title"
+```
+就能在source/_posts下看到你新建的文章了，在这里使用markdown语法开始写文章，启动服务`hexo server`就可以随时查看效果
 
-```
-hexo new [post|page|draft]"Article_title"
-```
-布局（Layout）
-Hexo 有三种默认布局：post、page 和 draft。在创建这三种不同类型的文件时，它们将会被保存到不同的路径；而您自定义的其他布局和 post 相同，都将储存到 source/_posts 文件夹。
-
-post:
-```
-hexo new post "Post_Article_title"
-```
-创建的post会放在source/_posts下面，并且post没有独立的访问路径，在你的博客首页就能看到所有的post
-
-page:
-```
-hexo new page "Page_Article_title"
-```
-创建的page会放在source下面，每一篇page都有独立的访问路径，路径地址是blog_home_link/page_article_file_name
-
-文章的模板在scaffolds/下面，你也可以自定义模板名称和格式，在创建时使用你的自定义模板。
-
-备注：使用vscode编辑器，可以用Control+Shift+V预览markdown格式的文章
+## 结语
+到这里就完成了个人博客搭建了，如何发布文章、配置主题可以看Hexo的官方文档：https://hexo.io/docs/
