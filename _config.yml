@@ -3,8 +3,8 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Xuelian's Blog
-subtitle: Technology Blog //技术博客
+title: Xuelian's Technology Blog
+subtitle: Share technical learning experiences including JavaScript, Golang, React, HTML/CSS, MySQL and other technologies
 description: The technical blog homepage of a front-end engineer who has worked for 7 years records her learning experience in the front-end field.
 keywords: Frontend, JavaScript, React, Node.js, Algorithm, Data Structure
 author: Xuelian Deng
@@ -96,7 +96,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: new-landscape
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
