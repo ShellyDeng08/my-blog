@@ -3,7 +3,8 @@ title: >-
   Daily Behavioral Questions--Could you tell me about a complex problem you
   solved at work?你如何解决工作中遇到的复杂问题
 date: 2023-12-04 09:58:53
-tags: Behavioral Questions
+categories: Behavioral Questions
+tags: 
 ---
 # English 
 To prepare effectively for a behavioral interview question about solving a complicated problem, it's essential to select a relevant issue and structure your response using the STAR method. Here's a breakdown of your approach:

@@ -1,1 +1,41 @@
-<%- partial('_partial/archive', {pagination: 2, index: true}) %>
+<!-- <%- partial('_partial/archive', {pagination: 2, index: true}) %> -->
+<!-- 按分类查看 -->
+<div class="blog-home">
+    <h2 class="home-title"><%= __('categories') %></h2>
+    <% site.categories.each(function(category) { %>
+        <h3 class="home-subtitle"><%= category.name %></h3>
+        <ul class="home-list">
+            <% category.posts.each(function(post) { %>
+                <li><a href="<%= post.permalink %>"><%= post.title %></a></li>
+            <% }); %>
+        </ul>
+    <% }); %>
+
+    <!-- 按时间顺序查看最近几条 -->
+    <h2 class="home-title"><%= __('recent_posts') %></h2>
+    <ul class="home-list">
+        <% site.posts.sort('date', -1).limit(theme.recent_posts_limits).each(function(post){ %>
+        <li>
+            <a href="<%- url_for(post.path) %>"><%= post.title || '(no title)' %></a>
+        </li>
+        <% }) %>
+    </ul>
+
+    <h2 class="home-title"><%= __('tags') %></h2>
+    <ul class="home-list">
+        <% site.tags.each(function(tag) { %>
+            <% console.log('permalink:',tag.permalink) %>
+            <% console.log('path:', tag.path) %>
+            <li>
+                <a href="<%- url_for(tag.path) %>"><%= tag.name %></a>
+            </li>
+            <!-- <ul>
+                <% tag.posts.each(function(post) { %>
+                    <li><a href="<%= post.permalink %>"><%= post.title %></a></li>
+                <% }); %>
+            </ul> -->
+        <% }); %>
+    </ul>
+    
+</div>
+

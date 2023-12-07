@@ -1,7 +1,8 @@
 ---
 title: Use Hexo + Github Page build Blog Website! // 使用Hexo + Github Page搭建个人博客
 date: 2023-11-30 11:00:00
-# tags: [Hexo, Github Page, 个人博客, 前端开发, Frontend]
+categories: Others
+tags: [Hexo, Github Page, 个人博客, 前端开发, Frontend]
 ---
 
 ## Install and Enviornment // 安装及环境搭建

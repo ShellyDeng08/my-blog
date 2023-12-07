@@ -6,8 +6,12 @@
     <div id="wrap">
       <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
       <div class="outer">
-        <section id="main"><%- body %></section>
-        <% if (theme.sidebar && theme.sidebar !== 'bottom'){ %>
+        <% if(page.path === 'index.html' || page.path === '') {%>
+          <section id="home-main"><%- body %></section>
+        <% } else {%>
+          <section id="main"><%- body %></section>
+        <% } %>
+        <% if (theme.sidebar && theme.sidebar !== 'bottom' && page.path !== 'index.html'){ %>
           <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
         <% } %>
       </div>

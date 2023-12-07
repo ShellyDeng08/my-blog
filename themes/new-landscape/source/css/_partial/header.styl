@@ -1,23 +1,26 @@
 #header
-  height: banner-height
+  // height: banner-height
   position: relative
   border-bottom: 1px solid color-border
-  &:before, &:after
-    content: ""
-    position: absolute
-    left: 0
-    right: 0
-    height: 40px
-  &:before
-    top: 0
-    background: linear-gradient(rgba(0, 0, 0, 0.2), transparent)
-  &:after
-    bottom: 0
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.2))
+  // &:before, &:after
+  //   content: ""
+  //   position: absolute
+  //   left: 0
+  //   right: 0
+  //   height: 40px
+  // &:before
+  //   top: 0
+  //   background: linear-gradient(rgba(0, 0, 0, 0.2), transparent)
+  // &:after
+  //   bottom: 0
+  //   background: linear-gradient(transparent, rgba(0, 0, 0, 0.2))
 
 #header-outer
   height: 100%
   position: relative
+  background-color #fff
+  padding: 0 30px;
+  box-shadow: 1px 2px 5px #ccc;
 
 #header-inner
   position: relative
@@ -64,7 +67,7 @@ $logo-text
 
 #main-nav
   float: left
-  margin-left: -15px
+  // margin-left: -15px
 
 $nav-link
   float: left
@@ -87,11 +90,26 @@ $nav-link
   padding: 20px 15px
   position: relative
   cursor: pointer
+  &:after, &:before {
+    content: ""
+    width: font-size
+    height: font-size
+    background-color #fff
+  }
+
 
 .main-nav-link
-  @extend $nav-link
-  font-weight: 300
+  // @extend $nav-link
+  font-weight: 600
   letter-spacing: 1px
+  text-decoration: none
+  color: #333;
+  cursor: pointer
+  display: inline-block;
+  padding: 20px 15px
+  &:hover {
+    color #000
+  }
   @media mq-mobile
     display: none
 

@@ -1,7 +1,8 @@
 ---
 title: Daily Behavioral Questions--How do you manage stress at work? 你如何管理工作时遇到的压力
 date: 2023-12-01 11:52:05
-tags: Behavioral Questions
+categories: Behavioral Questions
+tags: 
 ---
 
 # English 
