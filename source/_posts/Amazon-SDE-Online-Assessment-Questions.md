@@ -7,7 +7,7 @@ categories: Front-end Interview
 ## Code Question1
 水果消消乐
 
-![image](https://files.oaiusercontent.com/file-XoAwZ3GS8kQVPsrGnma8YawH?se=2023-12-13T21%3A30%3A02Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D3599%2C%20immutable&rscd=attachment%3B%20filename%3Dphoto-83348BFD-5B31-4F58-9C05-7D4A4378D67E.png&sig=HxEkhSdMnhjZywnn4apDqO9l3uX/lpefTWZon7TBWmc%3D)
+![IMG_659BD4DE-C7F7-4FAB-9589-E356C1460B7E](https://github.com/ShellyDeng08/my-website/assets/149735476/86924996-a8f8-43ef-9044-d95da7078f9c)
 题目给出一个包含数字的数组，每个数字代表一种水果，每次可以从数组中选出任意两个不相同的水果并消除。返回经过任意多次消除操作后，数组中还剩余的最少水果的数量。
 
 例1：fruits = [3,3,1,1,2]
@@ -25,7 +25,7 @@ categories: Front-end Interview
 ## Code Question2
 Delivery Center
 
-![image](https://files.oaiusercontent.com/file-3hJg1oNsu4AAGQiyr2AFPHOY?se=2023-12-13T21%3A30%3A02Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D3599%2C%20immutable&rscd=attachment%3B%20filename%3Dphoto-35435DBE-E2D1-4DEB-A65C-07569A8122E7.jpeg&sig=OQU79mEpg5K89mIvoKolH4H5wDdF5zDLK%2BBcGDBrW80%3D)
+![IMG_4DA8A7C2-CDC9-4AB5-BD05-4AF77C99002E](https://github.com/ShellyDeng08/my-website/assets/149735476/78ac1096-c1ca-40d6-9afc-bf38dc67cdad)
 
 题目给出一个数组center，center[i]表示配送中心在坐标上的点。距离d，要求在坐标上找到所以可以建仓库的点，这些点满足，从该点出发到所有的center，并从center返回该点，所有的距离只和不大于距离d。返回满足条件的点的数量。
 
