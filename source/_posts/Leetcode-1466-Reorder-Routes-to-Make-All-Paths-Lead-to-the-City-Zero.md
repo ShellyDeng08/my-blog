@@ -50,3 +50,35 @@ Space complexity: O(n).
 构建邻接表需要 O(n) 空间。
 在最坏的情况下，dfs 使用的递归调用堆栈最多可以有 n 个元素。 在这种情况下它将占用 O(n) 空间。O(2n) = O(n)
 ## 解法2 - BFS
+构建邻接表的逻辑不变，用队列来保存当前遍历的城市，用一个map结构来保存已经遍历过的城市。
+### 代码
+```
+// BFS
+var minReorder = function(n, connections) {
+    let adj = {}, queue = [0], count = 0, visited = {'0': true}
+    // 构建邻接表
+    for(let item of connections) {
+        adj[item[0]] = adj[item[0]] || []
+        adj[item[1]] = adj[item[1]] || []
+        adj[item[0]].push([item[1], 1])
+        adj[item[1]].push([item[0], 0])
+    }
+    while(queue.length) {
+        let curAdjArr = adj[queue[0]]
+        queue = queue.slice(1)
+        for(let node of curAdjArr) {
+            if(!visited[node[0]]) {
+                count += node[1]
+                visited[node[0]] = true
+                queue.push(node[0])
+            }
+        }
+    }
+    return count
+}
+```
+
+### 复杂度
+Time complexity: O(n).
+
+Space complexity: O(n).
